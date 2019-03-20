@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- Fuentes google -->
+  <link href="https://fonts.googleapis.com/css?family=Paprika|Questrial" rel="stylesheet">
+  <!--Enlace con la hoja de estilos CSS-->
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>NOMBRES DE BEBE</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>GENERADOR DE NOMBRES PARA BEBES</h1>
+    <div class="row">
+      <div class="col col-6">
+        <form class="miFormulario" action="/" method="post">
+          <label for="sexo">Sexo del bebé</label>
+          <select class="sexo form-control" name="sexo">
+            <option value="0">Escoge</option>
+            <option value="1">Niño</option>
+            <option value="2">Niña</option>
+          </select>
+
+          <label>Apellido del padre</label>
+          <input type="text" class="form-control" name="apelPadre" value="" placeholder="Apellido paterno">
+
+          <label>Apellido de la madre</label>
+          <input type="text" class="form-control" name="apelMadre" value="" placeholder="Apellido materno">
+          <br>
+          <button type="submit" name="button" class="btn btn-primary">GENERAR NOMBRE</button>
+        </form>
+      </div>
+      <div class="col col-6">
+        <img src="imagenes/0_bebe.jpg" class="foto" alt="avatar">
+      </div>
+    </div>
+  </div>
+  <!--Enlace con la librería jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--Popper.js, Bootstrap JS  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <!--Enlace con el archivo de javascript-->
+  <script src="js/javascript.js" charset="utf-8"></script>
+</body>
+
+</html>
