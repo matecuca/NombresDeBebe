@@ -10,8 +10,16 @@ h1 {
 .container {
   border: 1px solid red;
   width: 800px;
+  margin: 20px auto;
+  padding: 15px;
 }
 
-
+label {
+  padding-top: 15px;
+  margin-bottom: 0;
+}
+.dFoto {
+  text-align: center;
+}
 /* font-family: 'Metamorphous', cursive;
 font-family: 'Uncial Antiqua', cursive; */

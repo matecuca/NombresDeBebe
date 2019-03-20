@@ -22,13 +22,30 @@ app.post("/", function(req, res) {
   //Recojo valores que envían desde el formulario
   console.log(req.body);
   var sexo = req.body.sexo ;
-  var apellidoPaterno = req.body.apelPadre ;
+  var apellidoPaterno = req.body.apelPadre;
   var apellidoMaterno = req.body.apelMadre;
-  //Declaro los arrays de nombres
-  var nombresNenes = ["Daniel", "Javier", "Pablo", "Mario", "Martín", "Julio"];
-  var nombreNenas = ["Eva", "Ana", "Alba", "Lucía", "Elena", "Teresa"];
 
-  // res.send();
+  //Declaro los arrays de nombres
+  var nombresNene = ["Daniel", "Javier", "Pablo", "Mario", "Martín", "Julio", "Miguel"];
+  var nombresNena = ["Eva", "Ana", "Alba", "Lucía", "Elena", "Teresa", "Raquel"];
+
+  //Posición dentro del array de nombres. GEnerar nº aleatorio entre 0 y la longitud del array -1
+  var posicionNene = Math.round (Math.random()*(nombresNene.length-1));
+  var posicionNena = Math.round (Math.random()*(nombresNena.length-1));
+
+  //Comprobamos si es niño o niñs y responder con un nombre
+  //Para que reconozca las tildes y los caracteres especiales como la ñ.
+  res.writeHead(200, {"Content-Type": "text/html; charset=UTF-8"});
+  res.write("<h1>Enhorabuena!</h1>");
+  if (sexo ==="1") {
+    //Es NIÑO. la posición aleatorio entre 0 y la longitud del array -1
+    res.write("<h2> Puedes llamarle " +nombresNene[posicionNene]+" "+apellidoPaterno+ " " +apellidoMaterno+ "</h2>");
+  }
+  if (sexo === "2") {
+    //Es NIÑA. la posición aleatorio entre 0 y la longitud del array -1
+    res.write("<h2> Puedes llamarle " +nombresNena[posicionNena]+" "+apellidoPaterno+ " " +apellidoMaterno+ "</h2>");
+  }
+  res.send();
 });
 
 //Arrancar el servidor y que se quede escuchando
