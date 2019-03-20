@@ -18,15 +18,20 @@ app.get ("/", function (req, res) {
 });
 
 //Seccion del POST (Recogida y proceso de los datos del formulario)
-// app.post("/", function(req, res) {
-//
-//   res.send("El resultado de la suma es");
-// });
+app.post("/", function(req, res) {
+  //Recojo valores que envían desde el formulario
+  console.log(req.body);
+  var sexo = req.body.sexo ;
+  var apellidoPaterno = req.body.apelPadre ;
+  var apellidoMaterno = req.body.apelMadre;
+  //Declaro los arrays de nombres
+  var nombresNenes = ["Daniel", "Javier", "Pablo", "Mario", "Martín", "Julio"];
+  var nombreNenas = ["Eva", "Ana", "Alba", "Lucía", "Elena", "Teresa"];
+
+  // res.send();
+});
 
 //Arrancar el servidor y que se quede escuchando
 app.listen(3000, function () {
 console.log ("El servidor está listo y escuchando en el puerto 3000.");
 });
-
-var nombresNenes = ["Daniel", "Javier", "Pablo", "Mario", "Martín", "Julio"];
-var nombreNenas = ["Eva", "Ana", "Alba", "Lucía", "Elena", "Teresa"];
